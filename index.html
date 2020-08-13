@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Fact Core</title>
+  <link rel="stylesheet" type="text/css" href="./style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap" rel="stylesheet"> 
+  <!-- <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js" defer></script> -->
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.min.js" defer></script>
+  <script src="./app.js" defer></script>
+</head>
+<body>
+  <div id="app">
+    <header>
+      <a href="https://abstrusecore.site"><img class="logo" src="./core.gif" alt="logo" height="64px" width="64px"></a>
+      <h1>infoCore</h1>
+    </header>
+
+    <form v-on:reset="resetFields" v-on:submit.prevent="submitForm">
+
+      <div class="form-row">
+
+        <div class="form-field">
+
+          <!-- Periodic Table of Elements Form -->
+          <label for="atomicNum">Periodic Table of Elements</label>
+          <span>Atomic Number: {{ atomicNum }}</span><input type="range" id="atomicNum" value="1" min="1" v-bind:max="maxElement" v-model.number="atomicNum">
+
+          <!-- Planet Form -->
+          <label for="planets">Planet Data</label>
+          <input type="text" placeholder="Type in the name of a planet." id="planets" v-model.trim="planet" v-on:change="changeMax" v-on:keyup="changeMax" maxlength="15"/>
+          <span v-show="cantUse === false">Info: {{ planetVal }} </span>
+          <input v-show="cantUse === false" type="range" id="planetVal" value="1" min="1" v-bind:max="planetMax" v-model.number="planetVal" v-bind:disabled="cantUse">
+          
+
+        </div>
+
+        <div class="form-field">
+
+          <!-- Capital and Currency Form -->
+          <label for="capCur">Country Capitals/Currencies</label>
+          <input type="text" placeholder="Type in the name of a country." id="capCur" v-model.trim="CCC" maxlength="25"/>
+
+          <!-- United States Capital Form -->
+          <label for="usCap">United States Capitals</label>
+          <input type="text" placeholder="Type in the name of a state." id="usCap" v-model.trim="usC" maxlength="25"/>
+
+          <!-- Videogame Console Form -->
+          <label for="games">Best Selling Games</label>
+          <input type="text" placeholder="Type in the name of a console." id="games" v-model.trim="game" v-on:change="changeRankMax" v-on:keyup="changeRankMax" maxlength="20"/>
+          <span v-show="cantUse2 === false">Best Seller Rank: {{ rank }}</span>
+          <input v-show="cantUse2 === false" type="range" id="rank" value="1" min="1" v-bind:max="max" v-model.number="rank">
+
+        </div>
+
+      </div>
+
+      <div class="form-row vertical agreement checkbox">
+
+        <!-- Fact List -->
+        <fieldset id="facts">
+          <legend>Info</legend>
+          <p>Elements: <span>{{ n1 }}</span><br></p>
+          <p>Planet Data: <span>{{ n5 }}</span><br></p>
+          <p>Country Capitals/Currencies: <span>{{ n3 }}</span><br></p>
+          <p>United States Capitals: <span>{{ n2 }}</span><br></p>
+          <p>Best Selling Games: <span>{{ n4 }}</span><br></p>
+        </fieldset>
+
+      </div>
+
+        <!-- Reset the facts -->
+        <button type="reset" class="reset">Reset</button>
+
+      </div>
+    </form>
+  </div>
+</body>
+</html>

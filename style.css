@@ -1,0 +1,162 @@
+
+/* Header */
+
+header {
+  display: flex;
+  align-items: center;
+  color: #23C7A3;
+}
+
+.logo {
+  padding-right: 1.28rem;
+}
+
+h1 {
+  flex: 1;
+  font-size: 1.43rem;
+  font-weight: 900;
+  letter-spacing: 0.3px;
+}
+
+
+span {
+  font-size: 0.8rem;
+  margin-top: .5rem;
+}
+
+#facts {
+  background-color: #000000;
+}
+#facts p {
+  margin: 2rem;
+  font-size: 0.9rem;
+  color: #23C7A3;
+}
+#facts legend {
+  color: #ff798b;
+}
+#facts span {
+  font-size: 0.8rem;
+  color: #ff798b;
+}
+
+/* Form Elements */
+@media only screen and (max-width: 600px)
+{
+  /* Site-Wide Styles */
+  html {
+    font-size: 12px;
+    font-family: 'Press Start 2P', monospace;
+    line-height: 2.5;
+    background-color: #52493e;
+    color: #ebdac3;
+  }
+
+
+  form {
+    display: flex;
+    flex-direction: column;
+    padding: 3rem 0;
+    font-size: 1.4rem;
+  }
+  button {
+    cursor: pointer;
+    padding: 1rem 1rem;
+    border-radius: 4px;
+    margin: 1rem 1rem;
+    background-color: gray;
+    font-size: 1.5rem;
+    color: #ffffff;
+    transition: .25s;
+  }
+}
+@media only screen and (min-width: 601px)
+{
+  /* Site-Wide Styles */
+  html {
+    font-size: 13px;
+    font-family: 'Press Start 2P', monospace;
+    line-height: 2.5;
+    background-color: #52493e;
+    color: #ebdac3;
+  }
+
+
+  form {
+    display: flex;
+    flex-direction: column;
+    padding: 3rem 1rem;
+    font-size: 1.75rem;
+  }
+  button {
+    cursor: pointer;
+    padding: 1rem 1rem;
+    border-radius: 4px;
+    margin: 1rem 1rem;
+    background-color: gray;
+    font-size: 2rem;
+    color: #ffffff;
+    transition: .25s;
+  }
+}
+
+input,
+textarea,
+select {
+  padding: .71rem;
+  margin-right: 1.21rem;
+  background-color: #000000;
+  color: white;
+  border: solid 1.5px white;
+}
+
+textarea:focus, 
+input:focus{
+    outline: none;
+}
+
+label {
+  margin-bottom: .71rem;
+  margin-top: .71rem;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+legend {
+  margin-bottom: .71rem;
+  font-weight: bold;
+}
+
+
+.form-row {
+  display: flex;
+  margin-bottom: 2.14rem;
+}
+
+.form-row.vertical {
+  flex-direction: column;
+}
+
+.form-row > * {
+  flex: 1;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  margin: 0 0.5rem;
+}
+
+
+button.active:hover {
+  background-color: #23C7A3;
+}
+
+button.reset {
+  cursor: pointer;
+  background-color: #6B3E44;
+}
+
+button.reset:hover {
+  background-color: #BA3648;
+}
