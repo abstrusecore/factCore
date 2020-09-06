@@ -1,6 +1,10 @@
 
 /* Header */
 
+body {
+  background: url(./fact.gif) repeat fixed center;
+}
+
 header {
   display: flex;
   align-items: center;
@@ -18,7 +22,6 @@ h1 {
   letter-spacing: 0.3px;
 }
 
-
 span {
   font-size: 0.8rem;
   margin-top: .5rem;
@@ -26,6 +29,8 @@ span {
 
 #facts {
   background-color: #000000;
+  border-radius: 10px;
+  border: solid 3px white;
 }
 #facts p {
   margin: 2rem;
@@ -41,7 +46,7 @@ span {
 }
 
 /* Form Elements */
-@media only screen and (max-width: 600px)
+@media only screen and (max-width: 601px)
 {
   /* Site-Wide Styles */
   html {
@@ -107,7 +112,8 @@ select {
   margin-right: 1.21rem;
   background-color: #000000;
   color: white;
-  border: solid 1.5px white;
+  border: solid 2px white;
+  border-radius: 10px;
 }
 
 textarea:focus, 
